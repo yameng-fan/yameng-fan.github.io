@@ -14,7 +14,7 @@ about:
     href: https://github.com/yameng-fan
   - icon: file-earmark-person
     text: CV
-    href: Yameng_Fan_CV.pdf
+    href: Yameng_Fan_CV.pdf.pdf
 ---
 
 ::: {#hero-heading}
