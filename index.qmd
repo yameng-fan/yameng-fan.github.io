@@ -6,15 +6,15 @@ about:
   image-width: 12em
   image-shape: round
   links:
-    - icon: mailbox
-      text: Email
-      href: mailto:fanym96@connect.hku.hk
-    - icon: github
-      text: GitHub
-      href: https://github.com/yameng-fan
-    - icon: file-earmark-person
-      text: CV
-      href: CV.pdf
+  - icon: mailbox
+    text: Email
+    href: mailto:fanym96@connect.hku.hk
+  - icon: github
+    text: GitHub
+    href: https://github.com/yameng-fan
+  - icon: file-earmark-person
+    text: CV
+    href: Yameng_Fan_CV.pdf
 ---
 
 ::: {#hero-heading}
