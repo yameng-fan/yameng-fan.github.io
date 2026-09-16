@@ -11,7 +11,6 @@
       --brown: #5b2d18;
       --text: #202124;
       --muted: #5f6368;
-      --light-muted: #70757a;
       --border: #e5e5e5;
       --link-red: #9f3a2b;
       --paper-title: #111111;
@@ -118,8 +117,8 @@
     }
 
     .paper {
-      margin: 0 0 38px;
-      padding-bottom: 24px;
+      margin: 0 0 42px;
+      padding-bottom: 10px;
     }
 
     .paper:last-child {
@@ -130,7 +129,7 @@
       display: flex;
       align-items: baseline;
       gap: 8px;
-      margin-bottom: 7px;
+      margin-bottom: 14px;
       line-height: 1.5;
       flex-wrap: wrap;
     }
@@ -148,20 +147,11 @@
       color: var(--paper-title);
     }
 
-    .paper-title a {
-      color: var(--paper-title);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .paper-title a:hover {
-      color: var(--link-red);
-    }
-
     .status-inline {
       color: #333333;
       font-size: 15px;
-      font-weight: 500;
+      font-weight: 400;
+      font-style: italic;
       white-space: nowrap;
     }
 
@@ -173,6 +163,8 @@
 
     .coauthor-inline a {
       color: var(--link-red);
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     .paper-links {
@@ -186,23 +178,33 @@
       text-underline-offset: 2px;
     }
 
-    .presentations,
+    .presentations {
+      margin-left: 24px;
+      margin-bottom: 18px;
+      color: #333333;
+      font-size: 13px;
+      line-height: 1.85;
+      font-style: italic;
+    }
+
+    .presentations strong {
+      color: #111111;
+      font-weight: 700;
+      font-style: italic;
+    }
+
     .abstract {
       margin-left: 24px;
       margin-bottom: 10px;
       color: #333333;
-      font-size: 14.8px;
-      line-height: 1.68;
+      font-size: 15.2px;
+      line-height: 1.75;
+      text-align: left;
     }
 
-    .presentations strong,
     .abstract strong {
       color: #111111;
       font-weight: 700;
-    }
-
-    .abstract {
-      text-align: left;
     }
 
     .wip-list {
@@ -283,8 +285,13 @@
         font-size: 15px;
       }
 
+      .paper {
+        margin-bottom: 38px;
+      }
+
       .paper-heading {
         align-items: flex-start;
+        gap: 7px;
       }
 
       .paper-title {
@@ -296,11 +303,16 @@
         font-size: 14.5px;
       }
 
-      .presentations,
+      .presentations {
+        margin-left: 22px;
+        font-size: 12.8px;
+        line-height: 1.8;
+      }
+
       .abstract {
         margin-left: 22px;
-        font-size: 14.5px;
-        line-height: 1.68;
+        font-size: 14.8px;
+        line-height: 1.72;
       }
 
       .wip-title {
@@ -321,10 +333,10 @@
     </div>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="teaching.html">Teaching</a>
-    </nav>
+  <a href="index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="teaching.html">Teaching</a>
+</nav>
   </header>
 
   <main>
