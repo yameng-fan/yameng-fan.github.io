@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Visits | Yameng Fan (范雅萌)</title>
+  <meta name="author" content="Yameng Fan" />
+  <meta name="description" content="Field visits by Yameng Fan (范雅萌), Ph.D. candidate in Economics at the University of Hong Kong." />
+  <link rel="canonical" href="https://yameng-fan.github.io/fieldwork.html" />
+
+  <style>
+    /* ===== 公共部分：所有页面保持一致 ===== */
+    :root {
+      --nav-bg: #1f3d63;
+      --nav-text: #ffffff;
+      --nav-hover: #bcd6f2;
+      --accent: #337ab7;
+      --accent-dark: #23527c;
+      --accent-light: #eef5fc;
+      --title: #1e3a5f;
+      --text: #111827;
+      --body: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --serif: Georgia, "Times New Roman", "Songti SC", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background: #ffffff;
+      line-height: 1.6;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--nav-bg);
+      color: var(--nav-text);
+      padding: 22px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .name { font-size: 20px; font-weight: 600; }
+    header .name a { color: var(--nav-text); text-decoration: none; }
+
+    nav { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+    nav a {
+      color: var(--nav-text);
+      text-decoration: none;
+      font-size: 14px;
+      padding-bottom: 3px;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover { color: var(--nav-hover); text-decoration: none; }
+    nav a.active { border-bottom-color: var(--nav-hover); }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-dark); text-decoration: underline; }
+
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 56px 36px 80px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      color: var(--title);
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 12px;   /* 下面有一句简介，所以间距小一些 */
+    }
+
+    footer {
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px 36px 40px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    footer .line { border-top: 1px solid var(--border); padding-top: 20px; }
+
+    /* ===== Field Visits 页专用 ===== */
+    .page-intro {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0 0 40px;
+    }
+
+    .visits {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 36px 28px;
+    }
+
+    .visit { margin: 0; }
+
+    .visit img {
+      width: 100%;
+      aspect-ratio: 4 / 3;     /* 所有照片统一裁成 4:3 */
+      object-fit: cover;
+      display: block;
+      border-radius: 6px;
+      background: #f4f4f4;
+      transition: opacity 0.2s;
+    }
+    .visit a:hover img { opacity: 0.88; }
+
+    .visit figcaption { padding-top: 12px; }
+
+    .visit h3 {
+      margin: 0 0 2px;
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .visit .meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+
+    .visit .desc {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--body);
+    }
+
+    /* ---------- 手机端 ---------- */
+    @media (max-width: 760px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 20px 24px;
+      }
+      nav { gap: 18px; }
+      main { padding: 40px 24px 56px; }
+      h1 { font-size: 28px; }
+      footer { padding: 20px 24px 36px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="name"><a href="index.html">Yameng Fan</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="fieldwork.html" class="active">Field Visits</a>
+      <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Field Visits</h1>
+    <p class="page-intro">Photos and notes from field visits related to my research.</p>
+
+    <section class="visits">
+
+      <!-- ===== 一次访问 = 一个 figure，复制整块就能加新的 ===== -->
+      <figure class="visit">
+        <a href="images/field/visit1.jpg" target="_blank" rel="noopener">
+          <img src="images/field/visit1.jpg" alt="Description of the photo" loading="lazy" />
+        </a>
+        <figcaption>
+          <h3>Title of the visit</h3>
+          <p class="meta">City, Province · Month Year</p>
+          <p class="desc">One or two sentences on what you saw and how it relates to your research.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="visit">
+        <a href="images/field/visit2.jpg" target="_blank" rel="noopener">
+          <img src="images/field/visit2.jpg" alt="Description of the photo" loading="lazy" />
+        </a>
+        <figcaption>
+          <h3>Title of the visit</h3>
+          <p class="meta">City, Province · Month Year</p>
+          <p class="desc">One or two sentences.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="visit">
+        <a href="images/field/visit3.jpg" target="_blank" rel="noopener">
+          <img src="images/field/visit3.jpg" alt="Description of the photo" loading="lazy" />
+        </a>
+        <figcaption>
+          <h3>Title of the visit</h3>
+          <p class="meta">City, Province · Month Year</p>
+          <p class="desc">One or two sentences.</p>
+        </figcaption>
+      </figure>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="line">© 2026 Yameng Fan</div>
+  </footer>
+</body>
+</html>
