@@ -9,13 +9,14 @@
   <link rel="canonical" href="https://yameng-fan.github.io/teaching.html" />
 
   <style>
-    /* ===== 配色：三个页面这一段保持一致，想换颜色只改这里 ===== */
+    /* ===== 公共部分：所有页面保持一致 ===== */
     :root {
       --nav-bg: #1f3d63;
       --nav-text: #ffffff;
       --nav-hover: #bcd6f2;
-      --accent: #337ab7;        /* 浅蓝：组标题、链接 */
+      --accent: #337ab7;
       --accent-dark: #23527c;
+      --accent-light: #eef5fc;
       --title: #1e3a5f;
       --text: #111827;
       --body: #1f2937;
@@ -26,7 +27,6 @@
     }
 
     * { box-sizing: border-box; }
-    html, body { height: 100%; }
 
     body {
       margin: 0;
@@ -40,7 +40,6 @@
       min-height: 100vh;
     }
 
-    /* ---------- 导航栏 ---------- */
     header {
       background: var(--nav-bg);
       color: var(--nav-text);
@@ -63,35 +62,47 @@
     nav a:hover { color: var(--nav-hover); text-decoration: none; }
     nav a.active { border-bottom-color: var(--nav-hover); }
 
-    /* ---------- 主体 ---------- */
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-dark); text-decoration: underline; }
+
     main {
       flex: 1;
       width: 100%;
-      max-width: 1040px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 64px 40px 80px;
+      padding: 56px 36px 80px;
     }
 
     h1 {
       font-family: var(--serif);
       color: var(--title);
-      font-size: 40px;
+      font-size: 34px;
       font-weight: 700;
-      margin: 0 0 48px;
+      line-height: 1.2;
+      margin: 0 0 40px;
     }
 
-    /* 每个学校一组 */
+    footer {
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px 36px 40px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    footer .line { border-top: 1px solid var(--border); padding-top: 20px; }
+
+    /* ===== Teaching 页专用 ===== */
     .group { margin-bottom: 44px; }
     .group:last-child { margin-bottom: 0; }
 
     .group h2 {
       font-size: 18px;
       font-weight: 700;
-      color: var(--accent);     /* 组标题：浅蓝色 */
+      color: var(--accent);
       margin: 0 0 20px;
     }
 
-    /* 每门课 */
     .course { margin: 0 0 18px; }
     .course:last-child { margin-bottom: 0; }
 
@@ -100,32 +111,12 @@
       color: var(--body);
       line-height: 1.7;
     }
-
-    .course-line .cname {
-      font-weight: 600;
-      color: var(--text);       /* 课程编号和课程名同色 */
-    }
+    .course-line .cname { font-weight: 600; color: var(--text); }
 
     .course-sub {
       font-size: 14px;
       color: var(--muted);
       line-height: 1.6;
-    }
-
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-dark); text-decoration: underline; }
-
-    footer {
-      width: 100%;
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 20px 40px 40px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-    footer .line {
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
     }
 
     /* ---------- 手机端 ---------- */
@@ -138,9 +129,10 @@
       }
       nav { gap: 18px; }
       main { padding: 40px 24px 56px; }
-      h1 { font-size: 30px; margin-bottom: 36px; }
-      .course-line { font-size: 15px; }
+      h1 { font-size: 28px; margin-bottom: 32px; }
       footer { padding: 20px 24px 36px; }
+
+      .course-line { font-size: 15px; }
     }
   </style>
 </head>
@@ -152,7 +144,8 @@
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="teaching.html" class="active">Teaching</a>
-      <a href="CV.pdf" target="_blank">CV</a>
+      <a href="fieldwork.html">Field Visits</a>
+      <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
   </header>
 
@@ -161,7 +154,7 @@
 
     <!-- ===== HKU ===== -->
     <section class="group">
-      <h2>Teaching Assistant at HKU:</h2>
+      <h2>Teaching Assistant at HKU</h2>
 
       <div class="course">
         <div class="course-line">
@@ -172,7 +165,6 @@
 
       <div class="course">
         <div class="course-line">
-          <!-- 如果记得学期，把 (2023) 改成 (2023 Spring) 或 (2023 Fall) -->
           <span class="cname">ECON6099 Topics in Growth and Development</span>, PhD Course (2023 Fall)
         </div>
         <div class="course-sub">Instructor: Prof. Xiaodong Zhu</div>
@@ -181,7 +173,7 @@
 
     <!-- ===== BNU ===== -->
     <section class="group">
-      <h2>Teaching Assistant at BNU:</h2>
+      <h2>Teaching Assistant at BNU</h2>
 
       <div class="course">
         <div class="course-line">
@@ -200,7 +192,7 @@
   </main>
 
   <footer>
-    <div class="line">© Yameng Fan</div>
+    <div class="line">© 2026 Yameng Fan</div>
   </footer>
 </body>
 </html>
