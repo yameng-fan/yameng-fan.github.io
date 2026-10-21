@@ -14,14 +14,14 @@
   <meta property="og:image" content="https://yameng-fan.github.io/images/headshot1.jpg" />
 
   <style>
-    /* ===== 配色：三个页面这一段保持一致，想换颜色只改这里 ===== */
+    /* ===== 公共部分：所有页面保持一致，想换颜色只改这里 ===== */
     :root {
-      --nav-bg: #1f3d63;        /* 导航栏深蓝 */
-      --nav-text: #ffffff;      /* 导航栏文字 */
-      --nav-hover: #bcd6f2;     /* 导航悬停/当前页 */
-      --accent: #337ab7;        /* 链接、强调色 */
-      --accent-dark: #23527c;   /* 悬停时更深的蓝 */
-      --accent-light: #eef5fc;  /* 浅蓝底 */
+      --nav-bg: #1f3d63;
+      --nav-text: #ffffff;
+      --nav-hover: #bcd6f2;
+      --accent: #337ab7;
+      --accent-dark: #23527c;
+      --accent-light: #eef5fc;
       --title: #1e3a5f;
       --text: #111827;
       --body: #1f2937;
@@ -32,8 +32,6 @@
     }
 
     * { box-sizing: border-box; }
-
-    html, body { height: 100%; }
 
     body {
       margin: 0;
@@ -47,7 +45,6 @@
       min-height: 100vh;
     }
 
-    /* ---------- 导航栏 ---------- */
     header {
       background: var(--nav-bg);
       color: var(--nav-text);
@@ -56,12 +53,10 @@
       justify-content: space-between;
       align-items: center;
     }
-
     header .name { font-size: 20px; font-weight: 600; }
     header .name a { color: var(--nav-text); text-decoration: none; }
 
     nav { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
-
     nav a {
       color: var(--nav-text);
       text-decoration: none;
@@ -69,24 +64,36 @@
       padding-bottom: 3px;
       border-bottom: 2px solid transparent;
     }
-
     nav a:hover { color: var(--nav-hover); text-decoration: none; }
     nav a.active { border-bottom-color: var(--nav-hover); }
 
-    /* ---------- 主体 ---------- */
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-dark); text-decoration: underline; }
+
+    footer {
+      width: 100%;
+      max-width: 1040px;   /* 首页宽一些，其他页面是 920px */
+      margin: 0 auto;
+      padding: 20px 40px 40px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    footer .line { border-top: 1px solid var(--border); padding-top: 20px; }
+
+    /* ===== 首页专用 ===== */
     main {
       flex: 1;
       width: 100%;
       max-width: 1040px;
       margin: 0 auto;
-      padding: 80px 40px 80px;
+      padding: 80px 40px;
     }
 
     .intro {
       display: grid;
       grid-template-columns: 300px minmax(0, 1fr);
       gap: 72px;
-      align-items: center;   /* 文字相对照片垂直居中，左右更平衡 */
+      align-items: center;
     }
 
     .portrait {
@@ -103,30 +110,8 @@
       line-height: 1.85;
       color: var(--body);
     }
-
     .content p:last-child { margin-bottom: 0; }
-
-    .content .job-market {
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-dark); text-decoration: underline; }
-
-    footer {
-      width: 100%;
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 20px 40px 40px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    footer .line {
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
-    }
+    .content .job-market { color: var(--text); font-weight: 700; }
 
     /* ---------- 手机端 ---------- */
     @media (max-width: 760px) {
@@ -153,6 +138,7 @@
       <a href="index.html" class="active">Home</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
+      <a href="fieldwork.html">Field Visits</a>
       <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
   </header>
@@ -177,9 +163,19 @@
           My fields are macro development, urban/spatial economics, and the Chinese economy.
         </p>
 
-        <!-- 4. 研究 focus + JMP -->
+        <!-- 4. 研究 focus -->
         <p>
-          My research focuses on structural transformation and urban development. I am particularly interested in how land and labor market institutions shape the allocation of land and labor across sectors and locations, and the welfare of rural and urban households.
+          My research focuses on structural transformation and urban development. I am particularly
+          interested in how land and labor market institutions shape the allocation of land and labor
+          across sectors and locations, and the welfare of rural and urban households.
+        </p>
+
+        <!-- （可选）想在首页直接链到 JMP，就把下面这段取消注释：
+        <p>
+          My <a href="research.html#jmp">job market paper</a> studies tradable development rights
+          and the Chongqing Land Coupon Reform.
+        </p>
+        -->
 
         <!-- 5. CV 和联系方式 -->
         <p>
