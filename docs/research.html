@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research | Yameng Fan</title>
+  <title>Research | Yameng Fan (范雅萌)</title>
+  <meta name="author" content="Yameng Fan" />
+  <meta name="description" content="Research of Yameng Fan (范雅萌), Ph.D. candidate in Economics at the University of Hong Kong: structural change, land institutions, and urban development in China." />
+  <link rel="canonical" href="https://yameng-fan.github.io/research.html" />
 
   <style>
-    /* ===== 配色：三个页面这一段保持一致 ===== */
+    /* ===== 公共部分：所有页面保持一致 ===== */
     :root {
       --nav-bg: #1f3d63;
       --nav-text: #ffffff;
@@ -30,11 +33,13 @@
       font-family: var(--sans);
       color: var(--text);
       background: #ffffff;
-      line-height: 1.62;
-      font-size: 15.5px;
+      line-height: 1.6;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    /* ---------- 导航栏 ---------- */
     header {
       background: var(--nav-bg);
       color: var(--nav-text);
@@ -43,12 +48,10 @@
       justify-content: space-between;
       align-items: center;
     }
-
     header .name { font-size: 20px; font-weight: 600; }
     header .name a { color: var(--nav-text); text-decoration: none; }
 
     nav { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
-
     nav a {
       color: var(--nav-text);
       text-decoration: none;
@@ -56,29 +59,44 @@
       padding-bottom: 3px;
       border-bottom: 2px solid transparent;
     }
-
     nav a:hover { color: var(--nav-hover); text-decoration: none; }
     nav a.active { border-bottom-color: var(--nav-hover); }
 
-    /* ---------- 主体 ---------- */
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* 子页面统一的主体宽度和标题 */
     main {
+      flex: 1;
+      width: 100%;
       max-width: 920px;
       margin: 0 auto;
-      padding: 54px 36px 76px;
+      padding: 56px 36px 80px;
     }
 
     h1 {
       font-family: var(--serif);
-      font-size: 34px;
       color: var(--title);
-      margin: 0 0 42px;
-      line-height: 1.2;
+      font-size: 34px;
       font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 40px;
     }
 
+    footer {
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px 36px 40px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    footer .line { border-top: 1px solid var(--border); padding-top: 20px; }
+
+    /* ===== Research 页专用 ===== */
     h2 {
       font-size: 22px;
-      margin: 44px 0 24px;
+      margin: 0 0 24px;
       line-height: 1.3;
       font-weight: 700;
       color: var(--text);
@@ -86,23 +104,19 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .section:first-of-type h2 { margin-top: 0; }
-
     p { margin: 0 0 12px; }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 2px; }
+    .section { margin-bottom: 52px; }
+    .section:last-child { margin-bottom: 0; }
 
-    .section { margin-bottom: 48px; }
-
-    .paper { margin: 0 0 42px; padding-bottom: 10px; }
+    .paper { margin: 0 0 44px; }
     .paper:last-child { margin-bottom: 0; }
 
     .paper-heading {
       display: flex;
       align-items: baseline;
       gap: 8px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       line-height: 1.5;
       flex-wrap: wrap;
     }
@@ -124,40 +138,43 @@
     }
 
     .coauthor-inline { color: #333333; font-size: 15.5px; font-weight: 400; }
+    .coauthor-inline a { text-decoration: underline; text-underline-offset: 2px; }
 
-    .coauthor-inline a {
+    /* Paper / Slides 按钮 */
+    .paper-links { margin: 0 0 16px 24px; }
+
+    .btn {
+      display: inline-block;
+      padding: 3px 14px;
+      margin: 0 8px 6px 0;
+      font-size: 13.5px;
+      font-weight: 600;
       color: var(--accent);
-      text-decoration: underline;
-      text-underline-offset: 2px;
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn:hover {
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
     }
 
-    .paper-links { margin: 4px 0 10px 24px; font-size: 14.5px; }
-
-    .paper-links a {
-      margin-right: 14px;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
+    /* Presentations：去掉斜体、字号调大 */
     .presentations {
-      margin-left: 24px;
-      margin-bottom: 18px;
-      color: #333333;
-      font-size: 13px;
-      line-height: 1.85;
-      font-style: italic;
+      margin: 0 0 16px 24px;
+      color: #4b5563;
+      font-size: 14px;
+      line-height: 1.75;
     }
-
     .presentations strong { color: var(--text); font-weight: 700; }
 
     .abstract {
-      margin-left: 24px;
-      margin-bottom: 10px;
+      margin: 0 0 10px 24px;
       color: #333333;
       font-size: 15.2px;
       line-height: 1.75;
     }
-
     .abstract strong { color: var(--text); font-weight: 700; }
 
     .wip-list { margin: 0; padding-left: 0; list-style: none; }
@@ -180,15 +197,7 @@
     .wip-title { font-weight: 700; font-size: 15.5px; color: var(--text); }
     .wip-title .coauthor-inline { font-weight: 400; }
 
-    footer {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 20px 36px 46px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 12px;
-    }
-
+    /* ---------- 手机端 ---------- */
     @media (max-width: 760px) {
       header {
         flex-direction: column;
@@ -197,18 +206,19 @@
         padding: 20px 24px;
       }
       nav { gap: 18px; }
-      main { padding: 42px 24px 64px; }
-      body { font-size: 15px; }
-      h1 { font-size: 30px; margin-bottom: 36px; }
-      h2 { font-size: 21px; margin-top: 38px; margin-bottom: 22px; }
+      main { padding: 40px 24px 56px; }
+      h1 { font-size: 28px; margin-bottom: 32px; }
+      footer { padding: 20px 24px 36px; }
+
+      h2 { font-size: 20px; }
       .paper { margin-bottom: 38px; }
       .paper-heading { align-items: flex-start; gap: 7px; }
       .paper-title { font-size: 16px; }
       .coauthor-inline, .status-inline { font-size: 14.5px; }
-      .presentations { margin-left: 22px; font-size: 12.8px; line-height: 1.8; }
-      .abstract { margin-left: 22px; font-size: 14.8px; line-height: 1.72; }
+      .paper-links, .presentations, .abstract { margin-left: 20px; }
+      .presentations { font-size: 13.5px; }
+      .abstract { font-size: 14.8px; line-height: 1.72; }
       .wip-title { font-size: 15px; }
-      footer { padding: 20px 24px 40px; }
     }
   </style>
 </head>
@@ -220,7 +230,8 @@
       <a href="index.html">Home</a>
       <a href="research.html" class="active">Research</a>
       <a href="teaching.html">Teaching</a>
-      <a href="CV.pdf" target="_blank">CV</a>
+      <a href="fieldwork.html">Field Visits</a>
+      <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
   </header>
 
@@ -230,7 +241,8 @@
     <section class="section">
       <h2>Working Papers</h2>
 
-      <article class="paper">
+      <!-- ===== JMP（id="jmp" 方便从首页直接跳过来：research.html#jmp） ===== -->
+      <article class="paper" id="jmp">
         <div class="paper-heading">
           <span class="paper-bullet">•</span>
           <span class="paper-title">
@@ -239,15 +251,15 @@
           <span class="status-inline">(Job Market Paper)</span>
         </div>
 
-        <!--
+        <!-- 上传文件前：如果要先发布网站，把下面这个 div 整段注释掉，避免点开是 404 -->
         <div class="paper-links">
-          <a href="papers/Structural_Change_Food_Security.pdf">Paper</a>
+          <a class="btn" href="papers/Fan_JMP.pdf" target="_blank" rel="noopener">Paper</a>
+          <a class="btn" href="papers/Fan_JMP_slides.pdf" target="_blank" rel="noopener">Slides</a>
         </div>
-        -->
 
         <p class="presentations">
           <strong>Presentations:</strong>
-          Asian and Australasian Society of Labour Economics 2026 Conference, PKU; 
+          Asian and Australasian Society of Labour Economics 2026 Conference, PKU;
           4th Annual Conference on China and the Global Economy, HKU;
           26th China Economics Annual Conference, BNU;
           19th China Economics Summer Institute, CUHK;
@@ -264,6 +276,7 @@
         </p>
       </article>
 
+      <!-- ===== The Farm Problem ===== -->
       <article class="paper">
         <div class="paper-heading">
           <span class="paper-bullet">•</span>
@@ -276,9 +289,9 @@
           </span>
         </div>
 
-        <!--
+        <!-- 有 draft 后取消注释：
         <div class="paper-links">
-          <a href="papers/The_Farm_Problem.pdf">Paper</a>
+          <a class="btn" href="papers/The_Farm_Problem.pdf" target="_blank" rel="noopener">Paper</a>
         </div>
         -->
 
@@ -308,7 +321,7 @@
         <li class="wip-item">
           <span class="wip-bullet">•</span>
           <span class="wip-title">
-            Neighborhood Fit and Spatial Spillovers from Urban Renewal,
+            Neighborhood Fit and Spatial Spillovers from Urban Renewal
             <span class="coauthor-inline">
               with <a href="https://sites.google.com/view/xiaobettywang/home" target="_blank" rel="noopener noreferrer">Betty Xiao Wang</a>
             </span>
@@ -318,7 +331,7 @@
         <li class="wip-item">
           <span class="wip-bullet">•</span>
           <span class="wip-title">
-            Market Access and Product Design: Evidence from the South Korean Entertainment Industry,
+            Market Access and Product Design: Evidence from the South Korean Entertainment Industry
             <span class="coauthor-inline">with Yi Xiang</span>
           </span>
         </li>
@@ -326,6 +339,8 @@
     </section>
   </main>
 
-  <footer>© Yameng Fan</footer>
+  <footer>
+    <div class="line">© 2026 Yameng Fan</div>
+  </footer>
 </body>
 </html>
