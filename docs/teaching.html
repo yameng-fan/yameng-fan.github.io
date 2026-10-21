@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teaching | Yameng Fan</title>
+  <title>Teaching | Yameng Fan (范雅萌)</title>
+  <meta name="author" content="Yameng Fan" />
+  <meta name="description" content="Teaching experience of Yameng Fan (范雅萌), Ph.D. candidate in Economics at the University of Hong Kong." />
+  <link rel="canonical" href="https://yameng-fan.github.io/teaching.html" />
 
   <style>
-    /* ===== 配色：三个页面这一段保持一致 ===== */
+    /* ===== 配色：三个页面这一段保持一致，想换颜色只改这里 ===== */
     :root {
       --nav-bg: #1f3d63;
       --nav-text: #ffffff;
       --nav-hover: #bcd6f2;
-      --accent: #337ab7;
+      --accent: #337ab7;        /* 浅蓝：组标题、链接 */
       --accent-dark: #23527c;
-      --accent-light: #eef5fc;
       --title: #1e3a5f;
       --text: #111827;
       --body: #1f2937;
@@ -24,6 +26,7 @@
     }
 
     * { box-sizing: border-box; }
+    html, body { height: 100%; }
 
     body {
       margin: 0;
@@ -31,7 +34,10 @@
       color: var(--text);
       background: #ffffff;
       line-height: 1.6;
-      font-size: 15.5px;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     /* ---------- 导航栏 ---------- */
@@ -43,12 +49,10 @@
       justify-content: space-between;
       align-items: center;
     }
-
     header .name { font-size: 20px; font-weight: 600; }
     header .name a { color: var(--nav-text); text-decoration: none; }
 
     nav { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
-
     nav a {
       color: var(--nav-text);
       text-decoration: none;
@@ -56,50 +60,75 @@
       padding-bottom: 3px;
       border-bottom: 2px solid transparent;
     }
-
     nav a:hover { color: var(--nav-hover); text-decoration: none; }
     nav a.active { border-bottom-color: var(--nav-hover); }
 
     /* ---------- 主体 ---------- */
     main {
-      max-width: 920px;
+      flex: 1;
+      width: 100%;
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 54px 36px 70px;
+      padding: 64px 40px 80px;
     }
 
     h1 {
       font-family: var(--serif);
-      font-size: 34px;
       color: var(--title);
-      margin: 0 0 42px;
-      line-height: 1.2;
+      font-size: 40px;
       font-weight: 700;
+      margin: 0 0 48px;
     }
 
-    .teaching-list { margin: 0; padding-left: 22px; }
+    /* 每个学校一组 */
+    .group { margin-bottom: 44px; }
+    .group:last-child { margin-bottom: 0; }
 
-    .teaching-list li {
-      margin-bottom: 16px;
-      line-height: 1.65;
+    .group h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent);     /* 组标题：浅蓝色 */
+      margin: 0 0 20px;
+    }
+
+    /* 每门课 */
+    .course { margin: 0 0 18px; }
+    .course:last-child { margin-bottom: 0; }
+
+    .course-line {
+      font-size: 16px;
       color: var(--body);
+      line-height: 1.7;
     }
 
-    .teaching-list li::marker { color: var(--accent); }
+    .course-line .cname {
+      font-weight: 600;
+      color: var(--text);       /* 课程编号和课程名同色 */
+    }
 
-    .teaching-list strong { font-weight: 700; color: var(--text); }
+    .course-sub {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
 
     a { color: var(--accent); text-decoration: none; }
     a:hover { color: var(--accent-dark); text-decoration: underline; }
 
     footer {
-      max-width: 920px;
+      width: 100%;
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 20px 36px 46px;
-      border-top: 1px solid var(--border);
+      padding: 20px 40px 40px;
       color: var(--muted);
       font-size: 12px;
     }
+    footer .line {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
 
+    /* ---------- 手机端 ---------- */
     @media (max-width: 760px) {
       header {
         flex-direction: column;
@@ -108,10 +137,10 @@
         padding: 20px 24px;
       }
       nav { gap: 18px; }
-      main { padding: 42px 24px 64px; }
-      body { font-size: 15px; }
+      main { padding: 40px 24px 56px; }
       h1 { font-size: 30px; margin-bottom: 36px; }
-      footer { padding: 20px 24px 40px; }
+      .course-line { font-size: 15px; }
+      footer { padding: 20px 24px 36px; }
     }
   </style>
 </head>
@@ -128,21 +157,50 @@
   </header>
 
   <main>
-    <h1>Teaching</h1>
+    <h1>Teaching Experience</h1>
 
-    <ul class="teaching-list">
-      <li>
-        <strong>Selected Topics in Macroeconomics II</strong>, Postgraduate, Teaching Assistant, University of Hong Kong, 2024.
-      </li>
-      <li>
-        <strong>Topics in Growth and Development</strong>, Postgraduate, Teaching Assistant, University of Hong Kong, 2023.
-      </li>
-      <li>
-        <strong>Economic Globalization</strong>, Undergraduate, Teaching Assistant, Beijing Normal University, 2020.
-      </li>
-    </ul>
+    <!-- ===== HKU ===== -->
+    <section class="group">
+      <h2>Teaching Assistant at HKU:</h2>
+
+      <div class="course">
+        <div class="course-line">
+          <span class="cname">ECON6059 Selected Topics in Macroeconomics II</span>, PhD Course (2024 Spring)
+        </div>
+        <div class="course-sub">Instructors: Prof. Xiaodong Zhu &amp; Prof. Xiaomei Sui</div>
+      </div>
+
+      <div class="course">
+        <div class="course-line">
+          <!-- 如果记得学期，把 (2023) 改成 (2023 Spring) 或 (2023 Fall) -->
+          <span class="cname">ECON6099 Topics in Growth and Development</span>, PhD Course (2023 Fall)
+        </div>
+        <div class="course-sub">Instructor: Prof. Xiaodong Zhu</div>
+      </div>
+    </section>
+
+    <!-- ===== BNU ===== -->
+    <section class="group">
+      <h2>Teaching Assistant at BNU:</h2>
+
+      <div class="course">
+        <div class="course-line">
+          <span class="cname">Economic Globalization</span>, Undergraduate Course (2020 Fall)
+        </div>
+        <div class="course-sub">Instructor: Prof. Chunming Zhao</div>
+      </div>
+
+      <div class="course">
+        <div class="course-line">
+          <span class="cname">International Trade</span>, Undergraduate Course, Online TA on MOOC (2019 Spring &amp; Fall)
+        </div>
+        <div class="course-sub">Instructor: Prof. Chunming Zhao</div>
+      </div>
+    </section>
   </main>
 
-  <footer>© Yameng Fan</footer>
+  <footer>
+    <div class="line">© Yameng Fan</div>
+  </footer>
 </body>
 </html>
