@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Field Visits | Yameng Fan (范雅萌)</title>
   <meta name="author" content="Yameng Fan" />
-  <meta name="description" content="Field visits by Yameng Fan (范雅萌), Ph.D. candidate in Economics at the University of Hong Kong." />
+  <meta name="description" content="Field visits by Yameng Fan (范雅萌), Ph.D. candidate in Economics at the University of Hong Kong: Chongqing land coupon reform, rural China, and urban renewal in Shenzhen." />
   <link rel="canonical" href="https://yameng-fan.github.io/fieldwork.html" />
 
   <style>
@@ -63,7 +63,7 @@
     nav a.active { border-bottom-color: var(--nav-hover); }
 
     a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-dark); text-decoration: underline; }
+    a:hover { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 2px; }
 
     main {
       flex: 1;
@@ -79,7 +79,7 @@
       font-size: 34px;
       font-weight: 700;
       line-height: 1.2;
-      margin: 0 0 12px;   /* 下面有一句简介，所以间距小一些 */
+      margin: 0 0 12px;
     }
 
     footer {
@@ -96,47 +96,69 @@
     .page-intro {
       color: var(--muted);
       font-size: 15px;
-      margin: 0 0 40px;
+      margin: 0 0 44px;
     }
 
-    .visits {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 36px 28px;
+    /* 每个项目一组 */
+    .project { margin-bottom: 60px; }
+    .project:last-child { margin-bottom: 0; }
+
+    .project h2 {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text);
+      margin: 0 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .visit { margin: 0; }
+    .project-intro {
+      margin: 0 0 6px;
+      font-size: 15.2px;
+      line-height: 1.75;
+      color: #333333;
+    }
 
-    .visit img {
+    .related {
+      margin: 0 0 24px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .related a { text-decoration: underline; text-underline-offset: 2px; }
+
+    /* 照片网格：cols-2 = 每行两张，cols-3 = 每行三张 */
+    .gallery { display: grid; gap: 28px 24px; }
+    .gallery.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .gallery.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .photo { margin: 0; }
+
+    .photo img {
       width: 100%;
-      aspect-ratio: 4 / 3;     /* 所有照片统一裁成 4:3 */
+      aspect-ratio: 4 / 3;      /* 统一裁成 4:3 */
       object-fit: cover;
+      object-position: center;  /* 某张裁得不好，就在 img 上加 style="object-position: 50% 80%" 调整 */
       display: block;
       border-radius: 6px;
       background: #f4f4f4;
       transition: opacity 0.2s;
     }
-    .visit a:hover img { opacity: 0.88; }
+    .photo a:hover img { opacity: 0.88; }
 
-    .visit figcaption { padding-top: 12px; }
+    .photo figcaption { padding-top: 10px; }
 
-    .visit h3 {
-      margin: 0 0 2px;
-      font-size: 16px;
-      color: var(--text);
+    .photo .cap {
+      margin: 0;
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--body);
     }
 
-    .visit .meta {
+    .photo .meta {
+      margin: 2px 0 0;
       font-size: 13px;
       color: var(--muted);
-      margin: 0 0 6px;
-    }
-
-    .visit .desc {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.7;
-      color: var(--body);
     }
 
     /* ---------- 手机端 ---------- */
@@ -151,6 +173,10 @@
       main { padding: 40px 24px 56px; }
       h1 { font-size: 28px; }
       footer { padding: 20px 24px 36px; }
+
+      .project h2 { font-size: 20px; }
+      .gallery.cols-2,
+      .gallery.cols-3 { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -169,44 +195,151 @@
 
   <main>
     <h1>Field Visits</h1>
-    <p class="page-intro">Photos and notes from field visits related to my research.</p>
+    <p class="page-intro">Fieldwork that informs my research on land institutions, migration, and urban development in China.</p>
 
-    <section class="visits">
+    <!-- ================= 项目 1：重庆地票（JMP） ================= -->
+    <section class="project">
+      <h2>Chongqing Land Coupon Reform</h2>
+      <p class="project-intro">
+        I visited the Chongqing Country Land Exchange, where land coupons are traded, and three rural
+        villages that supplied coupons, where I interviewed village officials about the reclamation of
+        rural construction land.
+      </p>
+      <p class="related">
+        Related paper: <a href="research.html#jmp">Structural Change and Food Security Constraints: A Market Solution</a>
+      </p>
 
-      <!-- ===== 一次访问 = 一个 figure，复制整块就能加新的 ===== -->
-      <figure class="visit">
-        <a href="images/field/visit1.jpg" target="_blank" rel="noopener">
-          <img src="images/field/visit1.jpg" alt="Description of the photo" loading="lazy" />
-        </a>
-        <figcaption>
-          <h3>Title of the visit</h3>
-          <p class="meta">City, Province · Month Year</p>
-          <p class="desc">One or two sentences on what you saw and how it relates to your research.</p>
-        </figcaption>
-      </figure>
+      <div class="gallery cols-2">
+        <figure class="photo">
+          <a href="images/field/cq-exchange.jpg" target="_blank" rel="noopener">
+            <img src="images/field/cq-exchange.jpg" alt="Yameng Fan at the Chongqing Country Land Exchange" loading="lazy" />
+          </a>
+          <figcaption>
+            <p class="cap">Chongqing Country Land Exchange, where land coupons are traded</p>
+            <p class="meta">Chongqing · Month Year</p>
+          </figcaption>
+        </figure>
 
-      <figure class="visit">
-        <a href="images/field/visit2.jpg" target="_blank" rel="noopener">
-          <img src="images/field/visit2.jpg" alt="Description of the photo" loading="lazy" />
-        </a>
-        <figcaption>
-          <h3>Title of the visit</h3>
-          <p class="meta">City, Province · Month Year</p>
-          <p class="desc">One or two sentences.</p>
-        </figcaption>
-      </figure>
+        <figure class="photo">
+          <a href="images/field/cq-shiliang.jpg" target="_blank" rel="noopener">
+            <!-- 竖版照片：只保留石碑和人，必要时调整 object-position -->
+            <img src="images/field/cq-shiliang.jpg" alt="Yameng Fan at the entrance of Shiliang Village" loading="lazy" style="object-position: 50% 85%;" />
+          </a>
+          <figcaption>
+            <p class="cap">Shiliang Village, one of three coupon-supplying villages visited</p>
+            <p class="meta">___ District, Chongqing · Month Year</p>
+          </figcaption>
+        </figure>
 
-      <figure class="visit">
-        <a href="images/field/visit3.jpg" target="_blank" rel="noopener">
-          <img src="images/field/visit3.jpg" alt="Description of the photo" loading="lazy" />
-        </a>
-        <figcaption>
-          <h3>Title of the visit</h3>
-          <p class="meta">City, Province · Month Year</p>
-          <p class="desc">One or two sentences.</p>
-        </figcaption>
-      </figure>
+        <figure class="photo">
+          <a href="images/field/cq-village-head.jpg" target="_blank" rel="noopener">
+            <img src="images/field/cq-village-head.jpg" alt="Yameng Fan with a village head after an interview" loading="lazy" />
+          </a>
+          <figcaption>
+            <p class="cap">After an interview with a village head</p>
+            <p class="meta">___ District, Chongqing · Month Year</p>
+          </figcaption>
+        </figure>
 
+        <figure class="photo">
+          <a href="images/field/cq-terrain.jpg" target="_blank" rel="noopener">
+            <img src="images/field/cq-terrain.jpg" alt="Hilly terraced farmland in rural Chongqing" loading="lazy" />
+          </a>
+          <figcaption>
+            <p class="cap">Hilly, terraced farmland typical of rural Chongqing</p>
+            <p class="meta">___ District, Chongqing · Month Year</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 项目 2：Farm Problem ================= -->
+    <section class="project">
+      <h2>Rural Surveys in Henan, Hunan, and Yunnan</h2>
+      <p class="project-intro">
+        Together with faculty and fellow students, I conducted field surveys of rural households
+        in Henan, Hunan, and Yunnan.
+      </p>
+      <p class="related">
+        Related paper: <a href="research.html#farm">The Farm Problem: A Quantitative Analysis</a>
+      </p>
+
+      <!-- 照片上传前先把对应的 figure 注释掉，否则会显示成空白框 -->
+      <div class="gallery cols-3">
+        <figure class="photo">
+          <a href="images/field/farm-henan.jpg" target="_blank" rel="noopener">
+            <img src="images/field/farm-henan.jpg" alt="Field survey in Henan" loading="lazy" />
+          </a>
+          <figcaption>
+            <p class="cap">Field survey in rural Henan</p>
+            <p class="meta">___ County, Henan · Month Year</p>
+          </figcaption>
+        </figure>
+
+        <figure class="photo">
+          <a href="images/field/farm-hunan.jpg" target="_blank" rel="noopener">
+            <img src="images/field/farm-hunan.jpg" alt="Field survey in Hunan" loading="lazy" />
+          </a>
+          <figcaption>
+            <p class="cap">Field survey in rural Hunan</p>
+            <p class="meta">___ County, Hunan · Month Year</p>
+          </figcaption>
+        </figure>
+
+        <figure class="photo">
+          <a href="images/field/farm-yunnan.jpg" target="_blank" rel="noopener">
+            <img src="images/field/farm-yunnan.jpg" alt="Field survey in Yunnan" loading="lazy" />
+          </a>
+          <figcaption>
+            <p class="cap">Field survey in rural Yunnan</p>
+            <p class="meta">___ County, Yunnan · Month Year</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 项目 3：深圳城市更新 ================= -->
+    <section class="project">
+      <h2>Urban Renewal in Shenzhen</h2>
+      <p class="project-intro">
+        I interviewed practitioners at an urban renewal company and visited urban villages
+        (<em>chengzhongcun</em>) undergoing redevelopment in Shenzhen.
+      </p>
+      <p class="related">
+        Related project: <a href="research.html#renewal">Neighborhood Fit and Spatial Spillovers from Urban Renewal</a>
+      </p>
+
+      <div class="gallery cols-3">
+        <figure class="photo">
+          <a href="images/field/sz-interview.jpg" target="_blank" rel="noopener">
+            <img src="images/field/sz-interview.jpg" alt="Yameng Fan with an interviewee at an urban renewal company" loading="lazy" />
+          </a>
+          <figcaption>
+            <p class="cap">Interview at an urban renewal company</p>
+            <p class="meta">Shenzhen · Month Year</p>
+          </figcaption>
+        </figure>
+
+        <figure class="photo">
+          <a href="images/field/sz-village-1.jpg" target="_blank" rel="noopener">
+            <img src="images/field/sz-village-1.jpg" alt="An urban village in Shenzhen" loading="lazy" />
+          </a>
+          <figcaption>
+            <p class="cap">An urban village in Shenzhen</p>
+            <p class="meta">___ District, Shenzhen · Month Year</p>
+          </figcaption>
+        </figure>
+
+        <figure class="photo">
+          <a href="images/field/sz-village-2.jpg" target="_blank" rel="noopener">
+            <img src="images/field/sz-village-2.jpg" alt="Redevelopment of an urban village in Shenzhen" loading="lazy" />
+          </a>
+          <figcaption>
+            <p class="cap">Redevelopment around an urban village</p>
+            <p class="meta">___ District, Shenzhen · Month Year</p>
+          </figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
