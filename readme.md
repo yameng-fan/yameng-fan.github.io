@@ -11,4 +11,5 @@ I am a Ph.D. Candidate in Economics at The University of Hong Kong.
 
 ## License
 
-See [LICENSE](LICENSE).
+The website code is released under the MIT License (see [LICENSE](LICENSE)), based on a template by Chi Zhang.
+All personal content (text, photos, CV, and papers) © Yameng Fan. All rights reserved.
