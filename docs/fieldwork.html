@@ -99,7 +99,6 @@
       margin: 0 0 44px;
     }
 
-    /* 每个项目一组 */
     .project { margin-bottom: 60px; }
     .project:last-child { margin-bottom: 0; }
 
@@ -136,9 +135,9 @@
 
     .photo img {
       width: 100%;
-      aspect-ratio: 4 / 3;      /* 统一裁成 4:3 */
+      aspect-ratio: 4 / 3;
       object-fit: cover;
-      object-position: center;  /* 某张裁得不好，就在 img 上加 style="object-position: 50% 80%" 调整 */
+      object-position: center;
       display: block;
       border-radius: 6px;
       background: #f4f4f4;
@@ -211,8 +210,8 @@
 
       <div class="gallery cols-2">
         <figure class="photo">
-          <a href="images/field/cq-exchange.jpg" target="_blank" rel="noopener">
-            <img src="images/field/cq-exchange.jpg" alt="Yameng Fan at the Chongqing Country Land Exchange" loading="lazy" />
+          <a href="images/cq-exchange.jpg" target="_blank" rel="noopener">
+            <img src="images/cq-exchange.jpg" alt="Yameng Fan at the Chongqing Country Land Exchange" loading="lazy" />
           </a>
           <figcaption>
             <p class="cap">Chongqing Country Land Exchange, where land coupons are traded</p>
@@ -221,9 +220,9 @@
         </figure>
 
         <figure class="photo">
-          <a href="images/field/cq-shiliang.jpg" target="_blank" rel="noopener">
-            <!-- 竖版照片：只保留石碑和人，必要时调整 object-position -->
-            <img src="images/field/cq-shiliang.jpg" alt="Yameng Fan at the entrance of Shiliang Village" loading="lazy" style="object-position: 50% 85%;" />
+          <a href="images/cq-shiliang.jpg" target="_blank" rel="noopener">
+            <!-- 竖版照片：第二个数字越小越靠上，越大越靠下 -->
+            <img src="images/cq-shiliang.jpg" alt="Yameng Fan at the entrance of Shiliang Village" loading="lazy" style="object-position: 50% 60%;" />
           </a>
           <figcaption>
             <p class="cap">Shiliang Village, one of three coupon-supplying villages visited</p>
@@ -232,8 +231,8 @@
         </figure>
 
         <figure class="photo">
-          <a href="images/field/cq-village-head.jpg" target="_blank" rel="noopener">
-            <img src="images/field/cq-village-head.jpg" alt="Yameng Fan with a village head after an interview" loading="lazy" />
+          <a href="images/cq-village-head.jpg" target="_blank" rel="noopener">
+            <img src="images/cq-village-head.jpg" alt="Yameng Fan with a village head after an interview" loading="lazy" />
           </a>
           <figcaption>
             <p class="cap">After an interview with a village head</p>
@@ -242,8 +241,8 @@
         </figure>
 
         <figure class="photo">
-          <a href="images/field/cq-terrain.jpg" target="_blank" rel="noopener">
-            <img src="images/field/cq-terrain.jpg" alt="Hilly terraced farmland in rural Chongqing" loading="lazy" />
+          <a href="images/cq-terrain.jpg" target="_blank" rel="noopener">
+            <img src="images/cq-terrain.jpg" alt="Hilly terraced farmland in rural Chongqing" loading="lazy" />
           </a>
           <figcaption>
             <p class="cap">Hilly, terraced farmland typical of rural Chongqing</p>
@@ -253,7 +252,9 @@
       </div>
     </section>
 
-    <!-- ================= 项目 2：Farm Problem ================= -->
+    <!-- ================= 项目 2：Farm Problem =================
+         照片上传到 docs/images/ 后，删掉本行的 "<!--" 开头和本段末尾的 "-->" 即可显示
+
     <section class="project">
       <h2>Rural Surveys in Henan, Hunan, and Yunnan</h2>
       <p class="project-intro">
@@ -264,11 +265,10 @@
         Related paper: <a href="research.html#farm">The Farm Problem: A Quantitative Analysis</a>
       </p>
 
-      <!-- 照片上传前先把对应的 figure 注释掉，否则会显示成空白框 -->
       <div class="gallery cols-3">
         <figure class="photo">
-          <a href="images/field/farm-henan.jpg" target="_blank" rel="noopener">
-            <img src="images/field/farm-henan.jpg" alt="Field survey in Henan" loading="lazy" />
+          <a href="images/farm-henan.jpg" target="_blank" rel="noopener">
+            <img src="images/farm-henan.jpg" alt="Field survey in Henan" loading="lazy" />
           </a>
           <figcaption>
             <p class="cap">Field survey in rural Henan</p>
@@ -277,8 +277,8 @@
         </figure>
 
         <figure class="photo">
-          <a href="images/field/farm-hunan.jpg" target="_blank" rel="noopener">
-            <img src="images/field/farm-hunan.jpg" alt="Field survey in Hunan" loading="lazy" />
+          <a href="images/farm-hunan.jpg" target="_blank" rel="noopener">
+            <img src="images/farm-hunan.jpg" alt="Field survey in Hunan" loading="lazy" />
           </a>
           <figcaption>
             <p class="cap">Field survey in rural Hunan</p>
@@ -287,8 +287,8 @@
         </figure>
 
         <figure class="photo">
-          <a href="images/field/farm-yunnan.jpg" target="_blank" rel="noopener">
-            <img src="images/field/farm-yunnan.jpg" alt="Field survey in Yunnan" loading="lazy" />
+          <a href="images/farm-yunnan.jpg" target="_blank" rel="noopener">
+            <img src="images/farm-yunnan.jpg" alt="Field survey in Yunnan" loading="lazy" />
           </a>
           <figcaption>
             <p class="cap">Field survey in rural Yunnan</p>
@@ -297,8 +297,11 @@
         </figure>
       </div>
     </section>
+    ================= 项目 2 结束 ================= -->
 
-    <!-- ================= 项目 3：深圳城市更新 ================= -->
+    <!-- ================= 项目 3：深圳城市更新 =================
+         照片上传到 docs/images/ 后，删掉本行的 "<!--" 开头和本段末尾的 "-->" 即可显示
+
     <section class="project">
       <h2>Urban Renewal in Shenzhen</h2>
       <p class="project-intro">
@@ -311,8 +314,8 @@
 
       <div class="gallery cols-3">
         <figure class="photo">
-          <a href="images/field/sz-interview.jpg" target="_blank" rel="noopener">
-            <img src="images/field/sz-interview.jpg" alt="Yameng Fan with an interviewee at an urban renewal company" loading="lazy" />
+          <a href="images/sz-interview.jpg" target="_blank" rel="noopener">
+            <img src="images/sz-interview.jpg" alt="Yameng Fan with an interviewee at an urban renewal company" loading="lazy" />
           </a>
           <figcaption>
             <p class="cap">Interview at an urban renewal company</p>
@@ -321,8 +324,8 @@
         </figure>
 
         <figure class="photo">
-          <a href="images/field/sz-village-1.jpg" target="_blank" rel="noopener">
-            <img src="images/field/sz-village-1.jpg" alt="An urban village in Shenzhen" loading="lazy" />
+          <a href="images/sz-village-1.jpg" target="_blank" rel="noopener">
+            <img src="images/sz-village-1.jpg" alt="An urban village in Shenzhen" loading="lazy" />
           </a>
           <figcaption>
             <p class="cap">An urban village in Shenzhen</p>
@@ -331,8 +334,8 @@
         </figure>
 
         <figure class="photo">
-          <a href="images/field/sz-village-2.jpg" target="_blank" rel="noopener">
-            <img src="images/field/sz-village-2.jpg" alt="Redevelopment of an urban village in Shenzhen" loading="lazy" />
+          <a href="images/sz-village-2.jpg" target="_blank" rel="noopener">
+            <img src="images/sz-village-2.jpg" alt="Redevelopment of an urban village in Shenzhen" loading="lazy" />
           </a>
           <figcaption>
             <p class="cap">Redevelopment around an urban village</p>
@@ -341,6 +344,7 @@
         </figure>
       </div>
     </section>
+    ================= 项目 3 结束 ================= -->
   </main>
 
   <footer>
